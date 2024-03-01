@@ -4,7 +4,8 @@ from datetime import datetime
 
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
-SET_TIME = "224400"
+SET_TIME = "090000"
+SET_TIME2 = "90000"
 
 email_list = []
 
@@ -30,7 +31,7 @@ weather_data = GetData()
 
 while True:
     time = datetime.now().strftime("%H%M%S")
-    if time == SET_TIME:
+    if time == SET_TIME or time == SET_TIME2:
         data = weather_data.get_weather_data()
         send_msg = str(data["list"][0]['weather'][0]['description'])
         select_mail()
