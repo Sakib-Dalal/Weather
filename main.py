@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import smtplib
 from weather_data import GetData
 from datetime import datetime
