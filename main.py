@@ -3,6 +3,7 @@
 import smtplib
 from weather_data import GetData
 from datetime import datetime
+import os
 
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
@@ -33,6 +34,13 @@ weather_data = GetData()
 
 while True:
     time = datetime.now().strftime("%H%M%S")
+    now = datetime.now()
+
+    # Reboot if time = 12
+    if now.hour == 12 and now.minute == 0:
+        os.system("sudo reboot")
+
+    # send email
     if time == SET_TIME or time == SET_TIME2:
         data = weather_data.get_weather_data()
         send_msg = str(data["list"][0]['weather'][0]['description'])
