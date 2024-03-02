@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
 
+# imported modules
 import smtplib
 from weather_data import GetData
 from datetime import datetime
 import os
 
+# custom modules
+from sheety import Sheety
+
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
-SET_TIME = "090000"
+SET_TIME = "204500"
 SET_TIME2 = "90000"
 
 email_list = []
 
-
+# Send email weather
 def sendmail(email, message):
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
@@ -21,14 +25,11 @@ def sendmail(email, message):
         # Send Email
         connection.sendmail(from_addr=SENDER_EMAIL, to_addrs=email, msg=f"Subject:Weather:\n\n{message}")
 
-
+# select email from sheety data
 def select_mail():
-    with open("./email.txt", "r") as email_file:
-        email = email_file.readlines()
-        email = [line.strip() for line in email]
-        print(email)
-        email_list.append(email)
-
+    sheety_data = Sheety()
+    global email_list
+    email_list = sheety_data.get_sheet_data()
 
 weather_data = GetData()
 
@@ -47,5 +48,6 @@ while True:
         select_mail()
         for email in email_list:
             sendmail(email=email, message=send_msg)
-            print("Email Send")
+            print(f"Email send to {email}.")
         print(email_list)
+
