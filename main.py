@@ -11,8 +11,8 @@ from sheety import Sheety
 
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
-SET_TIME = "204500"
-SET_TIME2 = "90000"
+SET_TIME = "213000"
+SET_TIME2 = "93000"
 
 email_list = []
 
