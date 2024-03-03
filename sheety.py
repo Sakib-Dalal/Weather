@@ -17,6 +17,19 @@ class Sheety:
         for email in data['sheet1']:
             self.email_data.append(email['email'])
         return self.email_data
+    
+    def post_sheet_data(self, email):
+        sheet_input = {
+            "sheet1":{
+                "email": email
+            }
+        }
+        self.response = requests.post(url=SHEETY_END_POINT, json=sheet_input)
+        print(self.response.text)
+
+    def delete_sheet_data(self, email):
+        self.response = requests.delete(url=f"{SHEETY_END_POINT}/{email}")
+        print(self.response.text)
 
 if __name__ == "__main__":
     data = Sheety()
