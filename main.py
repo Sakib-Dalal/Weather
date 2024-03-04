@@ -12,7 +12,7 @@ from sheety import Sheety
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
 SET_TIME = "213000"
-SET_TIME2 = "93000"
+SET_TIME2 = "093000"
 
 email_list = []
 
@@ -23,7 +23,7 @@ def sendmail(email, message):
         connection.login(user=SENDER_EMAIL, password=SENDER_PASSWORD)
 
         # Send Email
-        connection.sendmail(from_addr=SENDER_EMAIL, to_addrs=email, msg=f"Subject:Weather:\n\n{message}")
+        connection.sendmail(from_addr=SENDER_EMAIL, to_addrs=email, msg=f"Subject:Weather:\n\nHello todays there will be {message}")
 
 # select email from sheety data
 def select_mail():
@@ -38,7 +38,7 @@ while True:
     now = datetime.now()
 
     # Reboot if time = 12
-    if now.hour == 12 and now.minute == 0:
+    if now.hour == 12 and now.minute == 05:
         os.system("sudo reboot")
 
     # send email
