@@ -11,8 +11,8 @@ from sheety import Sheety
 
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
-SET_TIME = "213000"
-SET_TIME2 = "093000"
+SET_TIME = "210000"
+SET_TIME2 = "090000"
 
 email_list = []
 
@@ -38,7 +38,7 @@ while True:
     now = datetime.now()
 
     # Reboot if time = 12
-    if now.hour == 12 and now.minute == 05:
+    if now.hour == 12 and now.minute == 15:
         os.system("sudo reboot")
 
     # send email
