@@ -2,6 +2,7 @@ import requests
 
 API_KEY = "e8b2664d494ebd7d2426ffd3679c1ccf"
 URL = "http://api.openweathermap.org/data/2.5/forecast"
+# https://api.openweathermap.org/data/2.5/forecast?lat=16.815304&lon=74.569595&appid=e8b2664d494ebd7d2426ffd3679c1ccf&cnt=4
 
 MY_LAT = 16.815304
 MY_LNG = 74.569595
