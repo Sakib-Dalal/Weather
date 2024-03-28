@@ -69,7 +69,7 @@ while True:
         for i in range(0, 4):
             table.add_rows(
                 [
-                    [data["list"][i]['dt_txt'], data["list"][i]['weather'][0]['description'], f"{data["list"][i]['wind']['speed']} Km", f"{round(float(data["list"][i]['main']['temp_max'])-273.15, 2)} C", data["list"][i]['main']['pressure'], data["list"][i]['main']['humidity']]
+                    [data["list"][i]['dt_txt'], data["list"][i]['weather'][0]['description'], f"{data['list'][i]['wind']['speed']} Km", f"{round(float(data['list'][i]['main']['temp_max'])-273.15, 2)} C", data["list"][i]['main']['pressure'], data["list"][i]['main']['humidity']]
                 ]
             )
 
