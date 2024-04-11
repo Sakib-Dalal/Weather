@@ -18,7 +18,7 @@ class GetData:
     
     def get_weather_data(self):
         response = requests.get(url=URL, params=self.parameters)
-        response.raise_for_status
+        response.raise_for_status    # to raise error
         return response.json()
 
 if __name__ == "__main__":

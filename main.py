@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 
 # imported modules
-import smtplib
-from weather_data import GetData
-from datetime import datetime
-import os
-from prettytable import PrettyTable
+import smtplib   # email
+from datetime import datetime # date 
+import os # os
+from prettytable import PrettyTable # for formating the data
 from prettytable import MARKDOWN
-import requests
+import requests # http requests for api's
 
 # custom modules
 from sheety import Sheety
-
+from weather_data import GetData 
 
 SENDER_EMAIL = "sakibdalal73@gmail.com"
 SENDER_PASSWORD = "dzywnwnzhutsgcge"
