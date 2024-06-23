@@ -1,6 +1,6 @@
 import requests
 
-SHEETY_USER_NAME = "822d50c0ba48a0d28feb2305a5a52d6c"
+SHEETY_USER_NAME = "Sheety app Key"
 SHEETY_PROJECT_NAME = "weather"
 SHEETY_NAME = "sheet1"
 
