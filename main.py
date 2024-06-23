@@ -12,8 +12,8 @@ import requests # http requests for api's
 from sheety import Sheety
 from weather_data import GetData 
 
-SENDER_EMAIL = "sakibdalal73@gmail.com"
-SENDER_PASSWORD = "dzywnwnzhutsgcge"
+SENDER_EMAIL = "example@gmail.com"
+SENDER_PASSWORD = "gmail app password"
 SET_TIME = "090000"
 
 email_list = []
